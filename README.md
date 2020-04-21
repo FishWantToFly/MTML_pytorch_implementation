@@ -14,10 +14,7 @@ ScanNet official website : http://www.scan-net.org/ (for data download)
 ### (3) Data Preprocess (point cloud -> voxel)
 ```
 # Generate voxel from point cloud
-# DATASET_PATH : where you save your raw point cloud data
-# SAVE_PATH : where you want to save generated voxels (default : './voxel')
-python generate_voxel.py DATASET_PATH SAVE_PATH 
-
+python generate_voxel.py
 # Generate train / test data list
 cd voxel
 python generate_data_list.py
@@ -26,9 +23,7 @@ cd ..
 
 ### (3) Train/test
 ```
-# DATASET_PATH : where to read input data (default : './voxel')
-# CHECKPOINT_DIR : directory that saves checkpoint (default : './checkpoint)
-python train.py DATASET_PATH CHECKPOINT_DIR
+python train.py
 ```
 
 ### (4) Visualization
