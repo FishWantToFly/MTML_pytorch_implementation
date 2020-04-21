@@ -1,2 +1,40 @@
-# MTML_pytorch_implementation
-Unofficial implementation of 3D Instance Segmentation via Multi-Task Metric Learning (MTML).
+# Unofficial implementation of 3D Instance Segmentation via Multi-Task Metric Learning (MTML)
+This is unofficial implementation of MTML written in Pytorch.
+Notice : We just build the network and see its loss decrease untill epoch 100 while training, and we have not implemented any post-process yet (we just apply simple mean-shift to see its visualization); therefore, **we have no any experiments and performance report right now**.
+
+### (1) Setup
+* Ubuntu 16.04 + cuda 9.0
+* Python 3.6 + Pytorch 1.2
+* pyntcloud library
+
+### (2) Data Download
+We use ScanNet dataset to implement.
+ScanNet official website : http://www.scan-net.org/ (for data download)
+
+### (3) Data Preprocess (point cloud -> voxel)
+```
+# Generate voxel from point cloud
+# DATASET_PATH : where you save your raw point cloud data
+# SAVE_PATH : where you want to save generated voxels (default : './voxel')
+python generate_voxel.py DATASET_PATH SAVE_PATH 
+
+# Generate train / test data list
+cd voxel
+python generate_data_list.py
+cd ..
+```
+
+### (3) Train/test
+```
+# DATASET_PATH : where to read input data (default : './voxel')
+# CHECKPOINT_DIR : directory that saves checkpoint (default : './checkpoint)
+python train.py DATASET_PATH CHECKPOINT_DIR
+```
+
+### (4) Visualization
+```
+python main_train.py
+```
+
+### (5) Qualitative Results on ScanNet
+![Arch Image](https://github.com/Yang7879/3D-BoNet/blob/master/figs/fig_ins_scannet.png)
