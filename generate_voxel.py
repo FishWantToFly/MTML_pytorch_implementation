@@ -159,8 +159,8 @@ if __name__ == '__main__':
         if z_len_even % 2 == 1:
             z_len_even += 1 
 
-        voxel_sem_label = -1 * np.zeros((x_len_even, y_len_even, z_len_even, 1), dtype = np.int32) 
-        voxel_ins_label = -1 * np.zeros((x_len_even, y_len_even, z_len_even, 1), dtype = np.int32)
+        voxel_sem_label = -1 * np.ones((x_len_even, y_len_even, z_len_even, 1), dtype = np.int32) 
+        voxel_ins_label = -1 * np.ones((x_len_even, y_len_even, z_len_even, 1), dtype = np.int32)
         voxel_rgb = np.zeros((x_len_even, y_len_even, z_len_even, 3))
 
         sem_label_gt, ins_label_gt = collect_label(os.path.dirname(anky_cloud_label_path), scnen_name)
