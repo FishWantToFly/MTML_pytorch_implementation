@@ -149,7 +149,7 @@ def get_fea_loss(feature_embedding, batch_group, batch_sem):
         if (C == 0 or C == 1):
             loss_dist_batch  = torch.tensor(0)
             cn = 1
-        else : loss_dist_batch += (loss_dist_sum / (C * (C + 1)))
+        else : loss_dist_batch += (loss_dist_sum / (C * (C - 1)))
         
         ##################
         # compute loss_reg
