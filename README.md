@@ -37,8 +37,6 @@ python main_train.py
 2. Ground truth segmentation
 ![Arch Image](https://github.com/FishWantToFly/MTML_pytorch_implementation/blob/master/images/gt.png)
 3. Mean shift results of feature embedding
-
 ![Arch Image](https://github.com/FishWantToFly/MTML_pytorch_implementation/blob/master/images/mean%20shift.png)
-
 4. Instance segmentation results from mean shift of feature embedding
 ![Arch Image](https://github.com/FishWantToFly/MTML_pytorch_implementation/blob/master/images/mean%20shift%20prediction.png)
