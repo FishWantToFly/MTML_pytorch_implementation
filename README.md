@@ -28,7 +28,7 @@ python train.py
 
 ### (4) Visualization
 ```
-python main_train.py
+python show_result.py
 ```
 
 ### (5) Qualitative Results on ScanNet
